@@ -101,7 +101,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       name: Upload SARIF
       with:
-        name: sarif-analysis
+        name: sarif-analysis-${{ matrix.language }}
         path: ${{ steps.codeql_analysis.outputs.sarif-output }}
 
         
