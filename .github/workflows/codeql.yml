@@ -95,3 +95,12 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+        upload: false
+        path: ../sarifoutput
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: sarif-analysis
+        path: ../sarifoutput
+
+        
